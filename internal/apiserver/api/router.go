@@ -14,7 +14,9 @@ func NewRouter() *gin.Engine {
 	apiv1 := r.Group("/api/v1")
 	{
 		apiv1.GET("/SendRequestHeader", requestTest.SendRequestHeader)
-		apiv1.GET("/healthz", requestTest.CheckHealth)
 	}
+
+	r.GET("/healthz", requestTest.CheckHealth)
+
 	return r
 }

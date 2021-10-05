@@ -34,7 +34,7 @@ func (t TestRequest) SendRequestHeader(c *gin.Context) {
 	fmt.Printf("客户端 IP:%s,http 返回码：200", c.Request.RemoteAddr)
 	global.Logger.Info("客户端 IP:%s,http 返回码：200", c.Request.RemoteAddr)
 
-	response.ToResponse(gin.H{})
+	response.ToResponse(gin.H{"msg": "Success", "HttpCode": 200})
 	return
 }
 
@@ -46,6 +46,6 @@ func (t TestRequest) CheckHealth(c *gin.Context) {
 	fmt.Printf("客户端 IP:%v,http 返回码：200", c.Request.RemoteAddr)
 	global.Logger.Info("客户端 IP:%v,http 返回码：200", c.Request.RemoteAddr)
 
-	response.ToResponse(gin.H{})
+	response.ToResponse(gin.H{"msg": "Success", "HttpCode": 200})
 	return
 }
