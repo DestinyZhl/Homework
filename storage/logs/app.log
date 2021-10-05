@@ -1,0 +1,14 @@
+2021/09/29 14:30:36 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:2871","time":1632897036620362800}
+2021/09/29 14:30:59 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:2871","time":1632897059014602000}
+2021/09/29 14:31:01 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:2871","time":1632897061897890300}
+2021/09/29 14:33:15 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:1699","time":1632897195286227800}
+2021/09/29 14:34:07 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:1699","time":1632897247010399700}
+2021/09/29 14:34:18 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:7092","time":1632897258342532800}
+2021/09/29 14:35:40 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:7092","time":1632897340202718000}
+2021/09/29 14:37:14 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:7092","time":1632897434334130200}
+2021/09/29 14:43:55 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:12439","time":1632897835265219300}
+2021/09/29 14:44:58 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"服务器端VERSION：%s","time":1632897898334525600}
+2021/09/29 14:44:58 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:11891","time":1632897898335525700}
+2021/09/29 14:45:11 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"服务器端VERSION：%s","time":1632897911988890900}
+2021/09/29 14:45:11 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:11891","time":1632897911989891000}
+2021/09/29 14:46:57 {"callers":["C:/Users/zhanghailong/go/src/Homework2.2/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%s,http 返回码：200127.0.0.1:10397","time":1632898017253416300}
