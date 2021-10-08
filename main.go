@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
+	_ "homework/docs"
 	"homework/global"
 	routers "homework/internal/apiserver/api"
 	"homework/pkg/logger"
@@ -23,6 +24,13 @@ func init() {
 	}
 }
 
+// @title Swagger Example API
+// @version 1.0
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host 127.0.0.1:80
 func main() {
 	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()
