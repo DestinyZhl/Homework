@@ -27,7 +27,8 @@ func main() {
 	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()
 	s := &http.Server{
-		Addr:           ":" + global.ServerSetting.HttpPort,
+		//Addr:           ":" + global.ServerSetting.HttpPort,
+		Addr:           ":80",
 		Handler:        router,
 		ReadTimeout:    global.ServerSetting.ReadTimeout * time.Second,
 		WriteTimeout:   global.ServerSetting.WriteTimeout * time.Second,
