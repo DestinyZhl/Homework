@@ -5,8 +5,8 @@ build:
 
 release: build
 	echo "building httpserver container"
-	docker build -t homework/httpserver:${tag} .
+	docker build -t httpserver:${tag} .
 
 push:release
-	echo "pushing homework/httpserver"
-	docker push homework/httpserver:${tag}
+	echo "pushing homework_httpserver"
+	docker push httpserver:${tag}
