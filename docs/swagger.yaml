@@ -1,0 +1,32 @@
+host: 127.0.0.1:80
+info:
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /api/v1/SendRequestHeader:
+    get:
+      description: 将 request 中带的 header 写入 response header
+      responses:
+        "200":
+          description: '{"msg": "Success", "HttpCode": 200}'
+          schema:
+            type: string
+      summary: 接收客户端 request，并将 request 中带的 header 写入 response header
+      tags:
+      - 功能测试
+  /healthz:
+    get:
+      description: 健康检测
+      responses:
+        "200":
+          description: '{"msg": "Success", "HttpCode": 200}'
+          schema:
+            type: string
+      summary: 健康检测
+      tags:
+      - 健康检测
+swagger: "2.0"

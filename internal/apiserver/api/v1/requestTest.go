@@ -15,6 +15,11 @@ func NewTestRequest() TestRequest {
 	return TestRequest{}
 }
 
+//@Summary 接收客户端 request，并将 request 中带的 header 写入 response header
+//@Description 将 request 中带的 header 写入 response header
+//@Tags 功能测试
+//@Success 200 {string} string "{"msg": "Success", "HttpCode": 200}"
+//@Router /api/v1/SendRequestHeader [get]
 func (t TestRequest) SendRequestHeader(c *gin.Context) {
 	response := app.NewResponse(c)
 
@@ -38,6 +43,11 @@ func (t TestRequest) SendRequestHeader(c *gin.Context) {
 	return
 }
 
+//@Summary 健康检测
+//@Description 健康检测
+//@Tags 健康检测
+//@Success 200 {string} string "{"msg": "Success", "HttpCode": 200}"
+//@Router /healthz [get]
 func (t TestRequest) CheckHealth(c *gin.Context) {
 
 	response := app.NewResponse(c)
