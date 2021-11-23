@@ -1,7 +1,7 @@
 export tag=v1.0
 export dockerhub=sczhlpzz2008
-export username=sczhlpzz2008
-export password=*62266569z
+export username=******* #处于安全考虑，隐去用户名和密码 希望理解
+export password=******* #处于安全考虑，隐去用户名和密码 希望理解
 build:
 	echo "building httpserver binary"
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/amd64/httpserver .
