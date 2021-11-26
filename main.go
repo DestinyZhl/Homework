@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
 	_ "homework/docs"
@@ -10,6 +11,9 @@ import (
 	"homework/pkg/setting"
 	"log"
 	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
 	"time"
 )
 
@@ -42,7 +46,28 @@ func main() {
 		WriteTimeout:   global.ServerSetting.WriteTimeout * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
-	s.ListenAndServe()
+
+	sigtermChan := make(chan os.Signal, 1)
+	signal.Notify(sigtermChan, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
+
+	go func() {
+		s.ListenAndServe()
+	}()
+
+	global.Logger.Info("Http Server Started.")
+	<-sigtermChan
+	global.Logger.Info("Http Server Stopped.")
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer func() {
+		cancel()
+	}()
+
+	if err := s.Shutdown(ctx); err != nil {
+		global.Logger.Fatal("Http Server Shutdown Failed:%+v", err)
+	}
+	global.Logger.Info("Http Server Exited Properly")
+
 }
 
 func setupSetting() error {

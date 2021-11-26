@@ -9,3 +9,6 @@
 2021/10/08 10:54:23 {"callers":["C:/Users/zhanghailong/go/src/homework/main.go: 20 main.init.0"],"level":"info","message":"客户端 IP:%s,http 返回码：200127.0.0.1:8775","time":1633661663544376300}
 2021/10/08 10:56:25 {"callers":["C:/Users/zhanghailong/go/src/homework/main.go: 21 main.init.0"],"level":"info","message":"客户端 IP:%s,http 返回码：200127.0.0.1:4044","time":1633661785502570900}
 2021/10/08 10:59:37 {"callers":["C:/Users/zhanghailong/go/src/homework/main.go: 21 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200127.0.0.1:8748","time":1633661977152734000}
+2021/11/26 18:53:47 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Started.","time":1637924027091083000}
+2021/11/26 18:54:23 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Stopped.","time":1637924063646528200}
+2021/11/26 18:54:23 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Exited Properly","time":1637924063646528200}

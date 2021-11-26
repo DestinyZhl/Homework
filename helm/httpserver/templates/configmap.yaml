@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-conf
+  namespace: test
+data:
+  config.yaml: |
+    Server:
+      RunMode: debug
+      HttpPort: 8080
+      ReadTimeout: 60
+      WriteTimeout: 60
+    App:
+      DefaultPageSize: 10
+      MaxPageSize: 100
+      LogSavePath: storage/logs
+      LogFileName: app
+      LogFileExt: .log
