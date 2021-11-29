@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-conf
-  namespace: test
+  name: httpserver
 data:
   config.yaml: |
     Server:

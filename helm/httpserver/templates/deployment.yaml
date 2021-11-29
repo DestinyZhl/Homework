@@ -48,6 +48,7 @@ spec:
       volumes:
         - name: configmap
           configMap:
+            name: httpserver
             items:
               - key: config.yaml
                 path: config.yaml
