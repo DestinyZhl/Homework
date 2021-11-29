@@ -17,3 +17,5 @@
 2021/11/29 21:02:29 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Exited Properly","time":1638190949958827000}
 2021/11/29 21:03:15 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Started.","time":1638190995213957800}
 2021/11/29 21:03:25 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"客户端 IP:%v,http 返回码：200[::1]:3190","time":1638191005553392700}
+2021/11/29 21:05:30 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Stopped.","time":1638191130614027000}
+2021/11/29 21:05:30 {"callers":["G:/Code/Homework/homework/main.go: 25 main.init.0"],"level":"info","message":"Http Server Exited Properly","time":1638191130616768100}
