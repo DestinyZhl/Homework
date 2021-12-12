@@ -11,6 +11,9 @@ spec:
       {{- include "httpserver.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "80"
       labels:
         {{- include "httpserver.selectorLabels" . | nindent 8 }}
     spec:

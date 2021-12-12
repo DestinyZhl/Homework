@@ -7,6 +7,7 @@ import (
 	_ "homework/docs"
 	"homework/global"
 	routers "homework/internal/apiserver/api"
+	"homework/internal/metrics"
 	"homework/pkg/logger"
 	"homework/pkg/setting"
 	"log"
@@ -37,6 +38,8 @@ func init() {
 // @host 127.0.0.1:80
 func main() {
 	gin.SetMode(global.ServerSetting.RunMode)
+	metrics.Register()
+
 	router := routers.NewRouter()
 	s := &http.Server{
 		Addr: ":" + global.ServerSetting.HttpPort,

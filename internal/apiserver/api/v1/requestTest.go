@@ -4,8 +4,11 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"homework/global"
+	"homework/internal/metrics"
 	app "homework/internal/pkg"
+	"math/rand"
 	"os"
+	"time"
 )
 
 type TestRequest struct {
@@ -15,6 +18,11 @@ func NewTestRequest() TestRequest {
 	return TestRequest{}
 }
 
+func randInt(min int, max int) int {
+	rand.Seed(time.Now().UTC().UnixNano())
+	return min + rand.Intn(max-min)
+}
+
 //@Summary 接收客户端 request，并将 request 中带的 header 写入 response header
 //@Description 将 request 中带的 header 写入 response header
 //@Tags 功能测试
@@ -22,6 +30,11 @@ func NewTestRequest() TestRequest {
 //@Router /api/v1/SendRequestHeader [get]
 func (t TestRequest) SendRequestHeader(c *gin.Context) {
 	response := app.NewResponse(c)
+
+	timer := metrics.NewTimer()
+	defer timer.ObserveTotal()
+	delay := randInt(0, 2000)
+	time.Sleep(time.Millisecond * time.Duration(delay))
 
 	//1. 接收客户端 request，并将 request 中带的 header 写入 response header
 	for k, v := range c.Request.Header {
@@ -38,6 +51,7 @@ func (t TestRequest) SendRequestHeader(c *gin.Context) {
 	//3. Server 端记录访问日志包括客户端 IP，HTTP 返回码，输出到 server 端的标准输出
 	fmt.Printf("客户端 IP:%s,http 返回码：200", c.Request.RemoteAddr)
 	global.Logger.Info("客户端 IP:%s,http 返回码：200", c.Request.RemoteAddr)
+	global.Logger.Info("Respond in %d ms", delay)
 
 	response.ToResponse(gin.H{"msg": "Success", "HttpCode": 200})
 	return
